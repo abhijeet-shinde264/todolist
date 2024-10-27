@@ -1,38 +1,121 @@
-.App {
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
   text-align: center;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.toggle-button, .add-button, .reload-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.toggle-button:hover, .add-button:hover, .reload-button:hover {
+  background-color: #0056b3;
+}
+
+.add-todo-form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.todo-input, .status-select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.submit-button, .cancel-button {
+  padding: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #28a745; /* Green for submit */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button {
+  background-color: #dc3545; /* Red for cancel */
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+.cancel-button:hover {
+  background-color: #c82333;
+}
+
+.posts-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.post {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.post h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.post p {
+  margin: 0;
+  color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .toggle-button, .add-button, .reload-button, .submit-button, .cancel-button {
+    width: 100%; /* Full width buttons on smaller screens */
+    margin-bottom: 10px; /* Space between buttons */
+  }
+
+  .add-todo-form {
+    flex-direction: column;
   }
 }
